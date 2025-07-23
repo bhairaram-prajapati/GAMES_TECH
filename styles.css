@@ -109,6 +109,8 @@ body.menu-open {
 
 /* Hero section */
 .hero {
+    height: 50vh;
+    width: 100vw;
     background: linear-gradient(to right, #6A0DAD, #9B30FF);
     color: #fff;
     text-align: center;
@@ -221,6 +223,8 @@ section h2  {
 
 /* Quick Contact Form */
 #simple-form {
+    height: 80vh;
+    width: 80vw;
     background: linear-gradient(90deg, #e3e7ec 60%, #6A0DAD 100%);
     color: #fff;
     padding: 40px 20px;
@@ -377,7 +381,9 @@ section h2  {
     gap: 1.5vmin;
 }
 main h1{
-    color:#6d2f91
+    color:#6d2f91;
+    padding: 0;
+    margin: 0px;
 }
 .game {
     height: 60vmin;
@@ -387,6 +393,8 @@ main h1{
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
+    padding: 0;
+    margin-top: 0;
 }
 .box {
     height: 18vmin;
@@ -422,7 +430,7 @@ main h1{
     cursor: pointer;
     color: white;
     border: none;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 #msg {
     color: #9962b8;
@@ -432,6 +440,7 @@ main h1{
 }
 .msg-container {
     height: 30vmin;
+    padding-top: 0;
 }
 .hide {
     display: none;
