@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMES-TECH PAGE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">GAMES-TECH</div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#simple-form">Contact</a></li>
+                <li><a href="#tictactoe">Tic-Tac-Toe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My GAMES-TECH</h1>
+        <p>Your journey to build and enjoy starts here.</p>
+        <a href="#simple-form" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="features">
+        <h2>Our Features</h2>
+    </section>
+    <section id="slide-x">
+        <div class="feature-container">
+        <button onclick="window.location.href='learn.html'" class="block-button">
+        <div class="feature-box">
+        <h3>Learn</h3>
+        <p>GAMES-TECH MAKES ATTRACTIVE UI-BASED PRODUCTS</p>
+        </div>
+        </button>
+
+        <button onclick="window.location.href='assign.html'" class="block-button">
+        <div class="feature-box">
+            <h3>Improvement Assistance</h3>
+            <p>GAMES-TECH FOCUS IN IMPROVEMENT IN EACH PHASE</p>
+        </div>
+        </button>
+
+        <button onclick="window.location.href='explore.html'" class="block-button">
+            <div class="feature-box">
+            <h3>Explore</h3>
+            <p>GAMES-TECH HELPS IN EXPLORATION</p>
+             </div>
+        </button>
+        </div>
+    </section>
+
+    <section id="service">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <p>"Their services made great impact & enjoyed a lot!"</p>
+            <cite>- Happy Client</cite>
+        </blockquote>
+    </section>
+
+    <section id="simple-form">
+        <h2>Quick Contact</h2>
+        <form id="bottomForm" class="quick-form">
+            <h2 >Login</h2>
+            <div class="form-row">
+                <input class="quick-input" type="text" name="quickname" placeholder="Your Name" required>
+                <input class="quick-input" type="email" name="quickemail" placeholder="Your Email" required>
+            </div>
+            <button class="quick-submit" type="submit">Send</button>
+        </form>
+    </section>
+
+    <section id="tictactoe">
+        <div class="msg-container hide">
+            <p id="msg">Winner</p>
+            <button id="new-btn">New Game</button>
+        </div>
+        <main>
+            <h1>Tic-Tac-Toe-game</h1>
+            <div class="container">
+                <div class="game">
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                </div>
+            </div>
+            <button id="reset-btn">Reset Game</button>
+            <div class="rating-section">
+  <h3>Rate This Game</h3>
+  <div class="star-rating">
+    <span class="star" data-rating="1">&#9734;</span>
+    <span class="star" data-rating="2">&#9734;</span>
+    <span class="star" data-rating="3">&#9734;</span>
+    <span class="star" data-rating="4">&#9734;</span>
+    <span class="star" data-rating="5">&#9734;</span>
+  </div>
+  <p id="rating-value">Your rating: 0</p>
+</div>
+
+
+        </main>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2025 GAMES-TECH. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
