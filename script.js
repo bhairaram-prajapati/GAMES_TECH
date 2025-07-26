@@ -1,14 +1,35 @@
 // Simple form alert
-document.addEventListener('DOMContentLoaded', function() {
-    const bottomForm = document.getElementById('bottomForm');
-    if (bottomForm) {
-        bottomForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for contacting us!');
+document.addEventListener('DOMContentLoaded', function () {
+  const bottomForm = document.getElementById('bottomForm');
+
+  if (bottomForm) {
+    bottomForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(bottomForm);
+
+      fetch(bottomForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+        .then(response => {
+          if (response.ok) {
+            alert('✅ Thank you for contacting us!');
             bottomForm.reset();
+          } else {
+            alert('⚠️ Submission failed. Please try again.');
+          }
+        })
+        .catch(error => {
+          alert('🚫 Network error. Please try again.');
         });
-    }
+    });
+  }
 });
+
 
 
 
@@ -93,6 +114,7 @@ const showWinner=(Winner)=>{
   })();
 
 };
+
 
 const checkWinner=()=>{
     for(let pattern of winPatterns){//pattetrn is index
