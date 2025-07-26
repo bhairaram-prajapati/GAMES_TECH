@@ -106,15 +106,48 @@ header {
 body.menu-open {
     overflow: hidden;
 }
+.wave-letter{
+    position: relative;
+    font-family: "Lato",sans-serif;
+    top:20px;
+    color:white;
+    display: inline-block;
+    font-size: 4rem;
+    text-shadow: 0 1px 0 #b7b7b7,0 2px 0 #b7b7b7, 0 3px 0 #b7b7b7, 0 4px 0 #b7b7b7,
+     0 5px 0 #b7b7b7,   6px 0 transparent,7px 0 transparent,8px 0 transparent,9px 0 transparent,
+    0 10px 10px rgba(0, 0, 0, 0.5) ;
+    
+    animation: bounce 0.4s ease infinite alternate;
+
+}
+.wave-letter {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.hello{
+    height: 100px;
+    width: 100%;
+    margin-top:0;
+}
 
 /* Hero section */
 .hero {
-    height: 50vh;
+    height: 80vh;
     width: 100vw;
     background: linear-gradient(to right, #6A0DAD, #9B30FF);
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 15px 20px ;
     text-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 
 }
@@ -125,8 +158,10 @@ body.menu-open {
 }
 .hero p {
     font-size: 20px;
-    margin: 20px 0;
+    margin: 20px 0 ;
+    margin-bottom: 45px;
 }
+
 .cta-button {
     background: #FFD700;
     color: #6A0DAD;
@@ -163,9 +198,13 @@ section h2  {
     scroll-behavior: smooth;
     overflow: auto;
     scrollbar-width: none; 
+    background-repeat: no-repeat;
 }
 
 .feature-container{
+    height:350px ;
+    width: 100%;
+    padding-top: 20px;
     display: flex;
     padding-left: 10px;
 }
@@ -188,6 +227,7 @@ section h2  {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
+    
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .feature-box{
@@ -219,23 +259,34 @@ section h2  {
     box-shadow: 0 6px 20px rgba(106, 13, 173, 0.15);
 }
 
-
+#clients{
+    position: relative;
+    font-family: "Lato",sans-serif;
+    top:20px;
+    color:white;
+    display: inline-block;
+    font-size: 4rem;
+    text-shadow: 0 1px 0 #7b2cbf ,0 2px 0 #7b2cbf , 0 3px 0 #7b2cbf , 0 4px 0 #7b2cbf ,
+     0 5px 0 #7b2cbf ,   6px 0 transparent,7px 0 transparent,8px 0 transparent,9px 0 transparent,
+    0 10px 10px rgba(0, 0, 0, 0.5) ;
+}
 
 /* Quick Contact Form */
 #simple-form {
-    height: 80vh;
-    width: 80vw;
-    background: linear-gradient(90deg, #e3e7ec 60%, #6A0DAD 100%);
+    
+    background: linear-gradient(90deg, #dde1e7 60%, #6A0DAD 100%);
     color: #fff;
+    padding: 40px 35px;
+    box-shadow: 0 8px 32px rgba(106,13,173,0.15);
+    display: flex;
+    flex-direction: column;
     padding: 40px 20px;
     text-align: center;
-    border-radius: 16px 16px 16px 16px;
-    margin-top: 40px;
     margin-left: 15px;
     margin-right: 15px;
-    box-shadow: 0 8px 32px rgba(106,13,173,0.15);
-     display: flex;
-    flex-direction: column;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 .quick-form {
     max-width: 500px;
@@ -288,7 +339,6 @@ section h2  {
     transform: rotate(0deg); /* default state */
 }
 
-/* Start animation on hover */
 #bottomForm:hover::before {
     animation: rotating 4s linear infinite;
 }
@@ -308,9 +358,6 @@ section h2  {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-
-
 
 .quick-input {
     flex: 1;
@@ -457,9 +504,11 @@ main h1{
 .rating-section {
   text-align: center;
   margin-top: 30px;
+  color:#6A0DAD;
 }
 
 .star-rating {
+    
   font-size: 2.5rem;
   color: #504c4c;
   cursor: pointer;
